@@ -6,7 +6,7 @@ date_default_timezone_set('Asia/Kolkata');
 $ldate=date( 'd-m-Y h:i:s A', time () );
 mysql_query("UPDATE userlog  SET logout = '$ldate' WHERE userEmail = '".$_SESSION['login']."' ORDER BY id DESC LIMIT 1");
 session_unset();
-$_SESSION['errmsg']="You have successfully logout";
+$_SESSION['errmsg']="You have logged out Successfully!";
 ?>
 <script language="javascript">
 document.location="index.php";
